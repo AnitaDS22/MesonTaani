@@ -1,7 +1,7 @@
 
 
 let nombreIngresado = prompt ("ingrese su nombre");
-let edad = promt ("ingrese su edad");
+let edad = prompt ("ingrese su edad");
 let pais = prompt ("ingrese su pais");
 let notaMate = prompt ("ingrese nota de matematica");
 let notaLengua = prompt ("ingrese nota de Lengua");

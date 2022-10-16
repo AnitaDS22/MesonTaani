@@ -3,4 +3,8 @@
   --secondary-color: rgba(22, 214, 224, 0.676);
   --text-color: rgb(50, 217, 156);
   --thirt-color: rgb(249, 165, 113);
+}
+
+body {
+  background-color: var(--secondary-color);
 }/*# sourceMappingURL=styles.css.map */
