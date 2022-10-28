@@ -1,29 +1,32 @@
-
-let mayorpuntaje = 0
-
-function GrupoA(pais, puntos, goles, capitan, tarjetasrojas, tarjetasamarillas){
-  
-  this.pais = pais,
-  this.puntos = puntos,
-  this.goles = goles, 
-  this.capitan = capitan,
-  this.tarjetasrojas = tarjetasrojas,
-  this.tarjetasamarillas = tarjetasamarillas,
-
-};
-
-const pais1 = new GrupoA ('Argentina', 0, 0);
-const pais2 = new GrupoA ('Arabia Saudita', 0, 0);
-const pais3 = new GrupoA ('Polonia', 0, 0);
-const pais4 = new GrupoA ('Mexico', 0, 0);
-
-console.log(pais1);
-console.log(pais2);
-console.log(pais3);
-console.log(pais4);
-
-let nuevosPuntos = parseInt prompt ("Ingresa los goles que metio" + );
+// Trabajo practico reserva y gestion mesas meson
+// El mozo tiene la opcion de realizar diferentes actividades 
+// 1. Funcion reserva de mesa
+// 2. Eleccion de menu
+// 3. Funcion de proveer la cuenta final
 
 
-alert(pais1);
-alert ("El pais con mayor puntaje es: " + mayorpuntje);
+let cantidadMesas = 10;
+let opcionAccion = 0;
+let mesa2 = 4;
+let mesa4 = 6;
+let mesa10 = 2; 
+
+
+
+let cantidadPersonas = prompt ("Cuantas personas quieren comer?");
+
+if (cantidadPersonas == 2) && (mesa2 > 0) { 
+
+  mesa2 - = mesa2;
+
+  alert ("Bienvenido, tenemos una mesa disponible para usted")
+
+}
+
+
+function ReservaMesa () {
+
+
+
+}
+
