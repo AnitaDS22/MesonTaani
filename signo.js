@@ -12,6 +12,7 @@ let mesa4 = 6;
 let mesa10 = 2; 
 
 
+function ReservaMesa () {
 
 let cantidadPersonas = prompt ("Cuantas personas quieren comer?");
 
@@ -23,10 +24,7 @@ if (cantidadPersonas == 2) && (mesa2 > 0) {
 
 }
 
-
-function ReservaMesa () {
-
-
-
 }
+
+// crear menu de acciones para mozo 
 
