@@ -44,31 +44,6 @@ function ReservaMesa() {
   }
 }
 
-class Menus {
-  constructor(entrada, segungoplato, postre, valor, calorias) {
-
-    this.entrada = entrada;
-    this.segungoplato = segungoplato;
-    this.postre = postre;
-    this.valor = valor;
-    this.calorias = calorias;
-  }
-}
-
-const menu1 = new Menus('Ensalada', 'Noquis con Papa', 'Helado', $1000, 300);
-const menu2 = new Menus('Ensalada', 'Bife de choriso', 'Flan', $1500, 500);
-const menu3 = new Menus('Sopa Calabaza', 'Mix Verduras', 'Torta', $1200, 100);
-const menu4 = new Menus('Mix picada', 'Hamburguesa', 'Panqueque', $1800, 200);
-
-console.log(menu1, menu2, menu3, menu4)
-
-const menuElegido = prompt ('elija que menu quiere: menu 1, menu 2, menu 3, menu 4')
-
-console.log(menuElegido);
-
-
-
-
 while (cantidadMesas < 16) {
   alert("Bienvenido a nuestro Meson")
 
@@ -83,10 +58,10 @@ while (cantidadMesas < 16) {
       ReservaMesa();
       break;
     case '2':
-      // 2. Eleccion de Menu
+      detallesmenu();
       break;
     case '3':
-      // 3. Cuenta total
+      cuentaTotal();
       break;
     case '4':
       // 4. Liberar mesa
@@ -101,6 +76,97 @@ while (cantidadMesas < 16) {
 
 alert("Lamentablemente tenemos todo ocupado")
 
+
+
+class Menus {
+  constructor (opcion, entrada, segungoplato, postre, valor, calorias) {
+
+    this.opcion = opcion;
+    this.entrada = entrada;
+    this.segungoplato = segungoplato;
+    this.postre = postre;
+    this.valor = valor;
+    this.calorias = calorias;
+  }
+}
+const menu1 = new Menus(1, 'Ensalada', 'Noquis con Papa', 'Helado', $1000, 300);
+const menu2 = new Menus(2, 'Ensalada', 'Bife de choriso', 'Flan', $1500, 500);
+const menu3 = new Menus(3, 'Sopa Calabaza', 'Mix Verduras', 'Torta', $1200, 100);
+const menu4 = new Menus(4, 'Mix picada', 'Hamburguesa', 'Panqueque', $1800, 200);
+
+function detallesmenu() {
+
+  console.log(menu1, menu2, menu3, menu4)
+
+
+  const menuElegido = parseInt(prompt('elija que menu quiere: menu: 1, menu: 2, menu: 3, menu: 4'))
+
+  console.log(menuElegido);
+
+  // variable elija menu correcto
+
+  let menuseleccionado = false
+
+  // variable con datos del menu seleccionado
+
+  let infomenuseleccionado
+
+  while (menuseleccionado === false) {
+    if (menuseleccionado === menu1.opcion) {
+      menuseleccionado = true;
+
+      infomenuseleccionado = menu1;
+
+      alert("Su menu esta compuesto por: Primer plato Ensalada, Segundo plato Noquis con Papa y para finalizar de postre tenemos Helado");
+
+    } else if (menuseleccionado === menu2.opcion) {
+      menuseleccionado = true;
+
+      infomenuseleccionado = menu2;
+
+      alert('Su menu esta compuesto por: Primer plato Ensalada, segundo plato Bife de choriso, postre Flan,');
+
+    }
+    else if (menuseleccionado === menu3.opcion) {
+      menuseleccionado = true;
+
+      infomenuseleccionado = menu3;
+
+      alert('Su menu esta compuesto por: Primer plato Sopa de Calabaza, segundo plato Mix de Verduras y postre Torta')
+    }
+    else if (menuseleccionado === menu4.opcion) {
+      menuseleccionado = true;
+
+      infomenuseleccionado = menu4;
+
+      alert('Su menu esta compuesto por: Primer plato Mix picada, segundo plato Hamburguesa y postre Panqueque')
+    }
+    else {
+      alert('Ese menu no esta disponible')
+      menuseleccionado = parseInt(prompt('elija que menu quiere, opciones: menu1, menu2, menu3, menu4'))
+
+    }
+
+  }
+  console.log(infomenuseleccionado);
+}
+
+
+
+
+// Valor total a pagar: Cuenta Total 
+
+const cuentaTotal = (menuElegido, valor) => {
+
+  const totalPersonasMesa = parseInt(prompt('Cuantas personas almorzaron en esta mesa'));
+
+  totalGralValor = totalPersonasMesa * menuElegido.valor;
+  return totalGralValor
+
+  //  alert ('El valor del almuerzo es:' + totalGralValor );
+}
+
+const total = totalGralValor(infomenuseleccionado.valor);
 
 
 
