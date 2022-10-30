@@ -13,6 +13,8 @@ let mesa8 = 4;
 let mesa12 = 2; 
 
 
+// Funcion reserva de mesa
+
 function ReservaMesa () {
  
 let cantidadPersonas = prompt ("Cuantas personas quieren comer?")
@@ -48,6 +50,6 @@ alert ("Bienvenido a nuestro Meson")
 ReservaMesa ()
 }
 
-
+alert ("Lamentablemente tenemos todo ocupado")
 // crear menu de acciones para mozo 
 
