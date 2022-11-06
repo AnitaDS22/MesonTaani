@@ -96,18 +96,31 @@ MenusdelaCasa.push(new Menus('menu2', 'Ensalada', 'Bife de choriso', 'Flan', $15
 MenusdelaCasa.push(new Menus('menu3', 'Sopa Calabaza', 'Mix Verduras', 'Torta', $1200, 5));
 MenusdelaCasa.push(new Menus('menu4', 'Mix picada', 'Hamburguesa', 'Panqueque', $1800, 20));
 
-//const menu1 = new Menus(1, 'Ensalada', 'Noquis con Papa', 'Helado', $1000, 300);
-//const menu2 = new Menus(2, 'Ensalada', 'Bife de choriso', 'Flan', $1500, 500);
-//const menu3 = new Menus(3, 'Sopa Calabaza', 'Mix Verduras', 'Torta', $1200, 100);
-//const menu4 = new Menus(4, 'Mix picada', 'Hamburguesa', 'Panqueque', $1800, 200);
-
 function detallesmenu() {
 
-  console.log('menu1', 'menu2', 'menu3', 'menu4');
+  const menu1desc = Menus.join (' ,');
+  
+  console.log (menu1desc);
 
-  const menuElegido = parseInt(prompt('elija que menu quiere: menu: 1, menu: 2, menu: 3, menu: 4'))
+ // console.log('menu1', 'menu2', 'menu3', 'menu4');
+
+
+
+  const menuElegido = prompt('Elija que menu quiere: \n menu1 \n menu2 \n menu3 \n menu4' 
+   );
 
   console.log(menuElegido);
+let existe = false;
+let posicion = -1;
+
+
+MenusdelaCasa.forEach((Menus, indice) => {
+if (menuseleccionado === Menus.opcion){
+existe = true;
+posicion = indice;
+}
+});
+
 
   // variable elija menu correcto
 
@@ -118,14 +131,14 @@ function detallesmenu() {
   let infomenuseleccionado
 
   while (menuseleccionado === false) {
-    if (menuseleccionado === menu1.opcion) {
+    if (menuseleccionado === Menus.opcion) {
       menuseleccionado = true;
 
-      infomenuseleccionado = menu1;
+     if (infomenuseleccionado = menu1){
 
       alert("Su menu esta compuesto por: Primer plato Ensalada, Segundo plato Noquis con Papa y para finalizar de postre tenemos Helado");
 
-    } else if (menuseleccionado === menu2.opcion) {
+    } else if (menuseleccionado === menu2) {
       menuseleccionado = true;
 
       infomenuseleccionado = menu2;
