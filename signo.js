@@ -79,25 +79,31 @@ alert("Lamentablemente tenemos todo ocupado")
 
 
 class Menus {
-  constructor (opcion, entrada, segungoplato, postre, valor, calorias) {
+  constructor (opcion, entrada, segungoplato, postre, valor, stock) {
 
     this.opcion = opcion;
     this.entrada = entrada;
     this.segungoplato = segungoplato;
     this.postre = postre;
     this.valor = valor;
-    this.calorias = calorias;
+    this.stock = stock;
   }
 }
-const menu1 = new Menus(1, 'Ensalada', 'Noquis con Papa', 'Helado', $1000, 300);
-const menu2 = new Menus(2, 'Ensalada', 'Bife de choriso', 'Flan', $1500, 500);
-const menu3 = new Menus(3, 'Sopa Calabaza', 'Mix Verduras', 'Torta', $1200, 100);
-const menu4 = new Menus(4, 'Mix picada', 'Hamburguesa', 'Panqueque', $1800, 200);
+
+let MenusdelaCasa = [];
+MenusdelaCasa.push(new Menus('menu1', 'Ensalada', 'Noquis con Papa', 'Helado', $1000, 10));
+MenusdelaCasa.push(new Menus('menu2', 'Ensalada', 'Bife de choriso', 'Flan', $1500, 15));
+MenusdelaCasa.push(new Menus('menu3', 'Sopa Calabaza', 'Mix Verduras', 'Torta', $1200, 5));
+MenusdelaCasa.push(new Menus('menu4', 'Mix picada', 'Hamburguesa', 'Panqueque', $1800, 20));
+
+//const menu1 = new Menus(1, 'Ensalada', 'Noquis con Papa', 'Helado', $1000, 300);
+//const menu2 = new Menus(2, 'Ensalada', 'Bife de choriso', 'Flan', $1500, 500);
+//const menu3 = new Menus(3, 'Sopa Calabaza', 'Mix Verduras', 'Torta', $1200, 100);
+//const menu4 = new Menus(4, 'Mix picada', 'Hamburguesa', 'Panqueque', $1800, 200);
 
 function detallesmenu() {
 
-  console.log(menu1, menu2, menu3, menu4)
-
+  console.log('menu1', 'menu2', 'menu3', 'menu4');
 
   const menuElegido = parseInt(prompt('elija que menu quiere: menu: 1, menu: 2, menu: 3, menu: 4'))
 
@@ -168,6 +174,9 @@ const cuentaTotal = (menuElegido, valor) => {
 
 const total = totalGralValor(infomenuseleccionado.valor);
 
+// creamos arrays postres
 
+const listapostres = [ "Helado", "Budin", "Panqueque", "Manzana"];
 
+console.log (listapostres.length);
 
