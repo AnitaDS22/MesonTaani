@@ -109,8 +109,9 @@ let menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
 
 alert ('el menu seleccionado es:' + (Menucliente) )
+alert (menuseleccionado)
 
-let cantidadMenu = parseInt (prompt('cuantos menus desea del menu $(menuseleccionado')
+let cantidadMenu = parseInt (prompt('cuantos menus desea del menu ${menuseleccionado}')
 )
 
 
