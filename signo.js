@@ -77,33 +77,50 @@ while (cantidadMesas < 16) {
 alert("Lamentablemente tenemos todo ocupado")
 
 // LISTA DE MENUS
+function detallesmenu() {
 
-let MenusdelaCasa = []
+const MenusdelaCasa = []
 
+// clase Menus
 class Menus {
   constructor (opcion, entrada, segungoplato, postre, valor, stock) {
 
-    this.opcion = opcion;
-    this.entrada = entrada;
-    this.segungoplato = segungoplato;
-    this.postre = postre;
-    this.valor = valor;
-    this.stock = stock;
+    this.opcion = opcion
+    this.entrada = entrada
+    this.segungoplato = segungoplato
+    this.postre = postre
+    this.valor = valor
+    this.stock = stock
   }
+}
+const menu1 = new Menus (1,'Ensalada', 'Noquis con Papa', 'Helado', 1000, 10)
+MenusdelaCasa.push(menu1)
+const menu2 = new Menus (2,'Ensalada', 'Bife de choriso', 'Flan', 1500, 15)
+MenusdelaCasa.push(menu2)
+const menu3 = new Menus (3,'Sopa Calabaza', 'Mix Verduras', 'Torta', 1200, 5)
+MenusdelaCasa.push(menu3)
+const menu4 = new Menus (4,'Mix picada', 'Hamburguesa', 'Panqueque', 1800, 20)
+MenusdelaCasa.push(menu4)
+
+
+console.log (Menus)
+
+let menuseleccionado = prompt ('Elija que menu desea: 1. 2. 3. 4')
+
+// mostrar los menus 
+
+menu1.array.forEach(entrada => { 
+  alert (entrada);
+  
+});
+
+
+alert ('Este es el menu');
+
 }
 
 
-MenusdelaCasa.push(new Menus(1, 'Ensalada', 'Noquis con Papa', 'Helado', $1000, 10));
-MenusdelaCasa.push(new Menus(2, 'Ensalada', 'Bife de choriso', 'Flan', $1500, 15));
-MenusdelaCasa.push(new Menus(3, 'Sopa Calabaza', 'Mix Verduras', 'Torta', $1200, 5));
-MenusdelaCasa.push(new Menus(4, 'Mix picada', 'Hamburguesa', 'Panqueque', $1800, 20));
-
-consolelog (Menus)
-
-function detallesmenu() 
-
   
-
 
 
 
