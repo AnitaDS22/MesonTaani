@@ -102,12 +102,22 @@ MenusdelaCasa.push(menu3)
 const menu4 = new Menus (4,'Mix picada', 'Hamburguesa', 'Panqueque', 1800, 20)
 MenusdelaCasa.push(menu4)
 
-
 console.log (Menus)
 
-let menuseleccionado = prompt ('Elija que menu desea: 1. 2. 3. 4')
+let menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
-// mostrar los menus 
+const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
+
+alert ('el menu seleccionado es:' + (Menucliente) )
+
+let cantidadMenu = parseInt (prompt('cuantos menus desea del menu $(menuseleccionado')
+)
+
+
+
+
+// mostrar los menus con funcion 
+
 
 menu1.array.forEach(entrada => { 
   alert (entrada);
