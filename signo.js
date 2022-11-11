@@ -108,27 +108,34 @@ let menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
 const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
 
-alert ('el menu seleccionado es:' + (Menucliente) )
-alert (menuseleccionado)
+alert ("El menu seleccionado es "  + menuseleccionado)
 
-let cantidadMenu = parseInt (prompt('cuantos menus desea del menu ${menuseleccionado}')
+let cantidadMenu = parseInt (prompt('Cuantos menus desea del menu ' + menuseleccionado)
+
 )
 
+}
+
+// Cuenta total
 
 
 
-// mostrar los menus con funcion 
+function cuentaTotal(){
+
+alert ('El total de su cuenta es:')
+
+alert (Menucliente)
+
+const totalmenu = menuseleccionado (Menus.valor) * cantidadMenu
+
+alert (totalmenu)
 
 
-menu1.array.forEach(entrada => { 
-  alert (entrada);
-  
-});
 
-
-alert ('Este es el menu');
 
 }
+
+
 
 
   
