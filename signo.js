@@ -79,7 +79,7 @@ alert("Lamentablemente tenemos todo ocupado")
 // LISTA DE MENUS
 function detallesmenu() {
 
-const MenusdelaCasa = []
+//const MenusdelaCasa = [] 
 
 // clase Menus
 class Menus {
@@ -92,7 +92,17 @@ class Menus {
     this.valor = valor
     this.stock = stock
   }
+
+  RestaStock (){
+    this.stock = this.stock -1;
+    console.log ('El stock de ${this.opcion} ha sido actualizado')
+  }
+
+
 }
+
+const MenusdelaCasa = []
+
 const menu1 = new Menus (1,'Ensalada', 'Noquis con Papa', 'Helado', 1000, 10)
 MenusdelaCasa.push(menu1)
 const menu2 = new Menus (2,'Ensalada', 'Bife de choriso', 'Flan', 1500, 15)
@@ -102,7 +112,15 @@ MenusdelaCasa.push(menu3)
 const menu4 = new Menus (4,'Mix picada', 'Hamburguesa', 'Panqueque', 1800, 20)
 MenusdelaCasa.push(menu4)
 
-console.log (Menus)
+console.table (MenusdelaCasa)
+
+const menuseleccionadocarrito = []
+
+let menuselecc = " Estos son los menus para ofrecerle: "
+
+// funcion agregar menuseleccionado
+
+function agregarMenuElegido (){
 
 const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
@@ -110,14 +128,23 @@ const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuselecciona
 
 alert ("El menu seleccionado es "  + menuseleccionado)
 
-const MenuValores = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
 
-alert (MenuValores)
+//menuseleccionado += '${MenusdelaCasa.opcion} - Este Menu consta de entrada ${MenusdelaCasa.entrada} , segundo planto ${MenusdelaCasa.segundo}, postre ${Menusdelacasa.postre} su valor es de $ ${Menusdelacasa.valor}'
 
-//if (Menucliente) {
- // MenuValor = MenuValor + Menucliente.valor
+for ( item of MenusdelaCasa) {
+  menuseleccionado += ' \n ${item.opcion} - Este Menu consta de entrada ${item.entrada} , segundo planto ${item.segundo}, postre ${item.postre} su valor es de $ ${item.valor}'
 
-//}
+  alert (menuseleccionado)
+
+}
+alert (menuseleccionado)
+
+let respuestaCliente = prompt (menuseleccionado)
+
+}
+
+agregarMenuElegido ()
+
 
 
 
