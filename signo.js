@@ -101,6 +101,7 @@ class Menus {
 
 }
 
+
 const MenusdelaCasa = []
 
 const menu1 = new Menus (1,'Ensalada', 'Noquis con Papa', 'Helado', 1000, 10)
@@ -113,37 +114,49 @@ const menu4 = new Menus (4,'Mix picada', 'Hamburguesa', 'Panqueque', 1800, 20)
 MenusdelaCasa.push(menu4)
 
 console.table (MenusdelaCasa)
+  
+
+
 
 const menuseleccionadocarrito = []
 
-let menuselecc = " Estos son los menus para ofrecerle: "
+let menusofrecido = "Estos son los Menus que tenemos: "
 
 // funcion agregar menuseleccionado
 
 function agregarMenuElegido (){
 
-const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+//const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
-const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
+//const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
 
-alert ("El menu seleccionado es "  + menuseleccionado)
+//alert ("El menu seleccionado es "  + menuseleccionado)
 
-
-//menuseleccionado += '${MenusdelaCasa.opcion} - Este Menu consta de entrada ${MenusdelaCasa.entrada} , segundo planto ${MenusdelaCasa.segundo}, postre ${Menusdelacasa.postre} su valor es de $ ${Menusdelacasa.valor}'
 
 for ( item of MenusdelaCasa) {
-  menuseleccionado += ' \n ${item.opcion} - Este Menu consta de entrada ${item.entrada} , segundo planto ${item.segundo}, postre ${item.postre} su valor es de $ ${item.valor}'
 
-  alert (menuseleccionado)
+  menusofrecido = 'Elija que menu desea: 1. 2. 3. 4'
+
+  let menuseleccionado = parseInt (prompt (menusofrecido));
+  
+
+  alert ('El precio del menu seleccionado es:')
+  alert (item.valor);
+
+  alert ('Este menu esta compuesto por:')
+ alert (item.entrada), (item.segungoplato), (item.postre)
+
+ // Menucliente += ' \n ${item.opcion} - Este Menu consta de entrada ${item.entrada} , segundo planto ${item.segundo}, postre ${item.postre} su valor es de $ ${item.valor}'
+
 
 }
-alert (menuseleccionado)
 
-let respuestaCliente = prompt (menuseleccionado)
 
 }
 
 agregarMenuElegido ()
+}
+
 
 
 
@@ -151,11 +164,11 @@ agregarMenuElegido ()
 alert (" valor de menu es " + MenuValor)
 
 
-let cantidadMenu = parseInt (prompt('Cuantos menus desea del menu ' + menuseleccionado)
+//let cantidadMenu = parseInt (prompt('Cuantos menus desea del menu ' + menuseleccionado)
 
-)
 
-}
+
+
 
 // Cuenta total
 
