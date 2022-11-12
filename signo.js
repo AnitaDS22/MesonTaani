@@ -104,11 +104,25 @@ MenusdelaCasa.push(menu4)
 
 console.log (Menus)
 
-let menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
 const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
 
 alert ("El menu seleccionado es "  + menuseleccionado)
+
+const MenuValores = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
+
+alert (MenuValores)
+
+//if (Menucliente) {
+ // MenuValor = MenuValor + Menucliente.valor
+
+//}
+
+
+
+alert (" valor de menu es " + MenuValor)
+
 
 let cantidadMenu = parseInt (prompt('Cuantos menus desea del menu ' + menuseleccionado)
 
