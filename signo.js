@@ -79,8 +79,6 @@ alert("Lamentablemente tenemos todo ocupado")
 // LISTA DE MENUS
 function detallesmenu() {
 
-//const MenusdelaCasa = [] 
-
 // clase Menus
 class Menus {
   constructor (opcion, entrada, segungoplato, postre, valor, stock) {
@@ -114,31 +112,43 @@ const menu4 = new Menus (4,'Mix picada', 'Hamburguesa', 'Panqueque', 1800, 20)
 MenusdelaCasa.push(menu4)
 
 console.table (MenusdelaCasa)
-  
+ 
+
+
 
 
 
 const menuseleccionadocarrito = []
 
-let menusofrecido = "Estos son los Menus que tenemos: "
+//let menusofrecido = "Estos son los Menus que tenemos: "
+
+
 
 // funcion agregar menuseleccionado
 
 function agregarMenuElegido (){
+ 
 
-//const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
-//const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
+const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
 
-//alert ("El menu seleccionado es "  + menuseleccionado)
+alert ("El menu seleccionado es "  + menuseleccionado)
+
 
 
 for ( item of MenusdelaCasa) {
+ let menusofrecido = "Estos son los Menus que tenemos: "
 
-  menusofrecido = 'Elija que menu desea: 1. 2. 3. 4'
+ const menusofrecidoentrada = MenusdelaCasa.filter (Menus => Menus.entrada === entrada)
+ console.log (menusofrecidoentrada)
+alert ('Estos son los platos de entrada'  + menusofrecidoentrada )
+}
 
-  let menuseleccionado = parseInt (prompt (menusofrecido));
-  
+}
+
+
+
 
   alert ('El precio del menu seleccionado es:')
   alert (item.valor);
@@ -146,20 +156,10 @@ for ( item of MenusdelaCasa) {
   alert ('Este menu esta compuesto por:')
  alert (item.entrada), (item.segungoplato), (item.postre)
 
- // Menucliente += ' \n ${item.opcion} - Este Menu consta de entrada ${item.entrada} , segundo planto ${item.segundo}, postre ${item.postre} su valor es de $ ${item.valor}'
-
-
-}
-
-
-}
 
 agregarMenuElegido ()
+
 }
-
-
-
-
 
 alert (" valor de menu es " + MenuValor)
 
@@ -184,15 +184,8 @@ const totalmenu = menuseleccionado (Menus.valor) * cantidadMenu
 
 alert (totalmenu)
 
-
-
-
 }
 
-
-
-
-  
 
 
 
