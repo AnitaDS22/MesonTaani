@@ -128,31 +128,35 @@ const menuseleccionadocarrito = []
 
 function agregarMenuElegido (){
  
-
 const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
-const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
+const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
 
+console.log (Menucliente)
 alert ("El menu seleccionado es "  + menuseleccionado)
+alert (Menucliente)
 
 const MenuValor = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
-console.log(MenuValor)
+//console.log(MenuValor)
   alert ('El precio del menu seleccionado es:')
-  alert (item.valor)
-
+  alert (MenuValor)
+  const MenuEntrada = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
   alert ('Este menu esta compuesto por:')
  alert (item.entrada)
+ const Menusegundoplato = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
  alert (item.segungoplato)
+ const MenuPostre = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
  alert (item.postre)
 
- //for ( item of MenusdelaCasa) {
+ for ( item of MenusdelaCasa) {
  // let menusofrecido = "Estos son los Menus que tenemos: "
  
   const menusofrecidoentrada = MenusdelaCasa.find ((Menus) => Menus.entrada)
   console.log (menusofrecidoentrada)
  alert ('Estos son los platos de entrada'  + menusofrecidoentrada )
  
-// }
+}
+
 
 }
 
