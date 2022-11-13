@@ -135,27 +135,26 @@ const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuselecciona
 
 alert ("El menu seleccionado es "  + menuseleccionado)
 
-
-
-for ( item of MenusdelaCasa) {
- let menusofrecido = "Estos son los Menus que tenemos: "
-
- const menusofrecidoentrada = MenusdelaCasa.filter (Menus => Menus.entrada === entrada)
- console.log (menusofrecidoentrada)
-alert ('Estos son los platos de entrada'  + menusofrecidoentrada )
-}
-
-}
-
-
-
-
+const MenuValor = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
+console.log(MenuValor)
   alert ('El precio del menu seleccionado es:')
-  alert (item.valor);
+  alert (item.valor)
 
   alert ('Este menu esta compuesto por:')
- alert (item.entrada), (item.segungoplato), (item.postre)
+ alert (item.entrada)
+ alert (item.segungoplato)
+ alert (item.postre)
 
+ //for ( item of MenusdelaCasa) {
+ // let menusofrecido = "Estos son los Menus que tenemos: "
+ 
+  const menusofrecidoentrada = MenusdelaCasa.find ((Menus) => Menus.entrada)
+  console.log (menusofrecidoentrada)
+ alert ('Estos son los platos de entrada'  + menusofrecidoentrada )
+ 
+// }
+
+}
 
 agregarMenuElegido ()
 
