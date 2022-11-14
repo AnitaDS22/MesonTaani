@@ -128,5 +128,39 @@ if (menuseleccionado === 1) {
    alert ('Estos son los platos de entrada'  + menusofrecidoentrada )
    
   }
+
+   
+ 
+const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+
+const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
+
+console.log (Menucliente)
+alert ("El menu seleccionado es "  + menuseleccionado)
+alert (Menucliente)
+
+}
+
+
+
+
+
+for ( item of MenusdelaCasa) {
+
+  alert ('El precio del menu seleccionado es:')
+  alert (Menus.valor)
+  alert ('Este menu esta compuesto por:')
+ alert (Menus.entrada)
+ alert (Menus.segungoplato)
+ alert (Menus.postre)
+
+ 
+ // let menusofrecido = "Estos son los Menus que tenemos: "
+ 
+  const menusofrecidoentrada = MenusdelaCasa.find ((Menus) => Menus.entrada)
+  console.log (menusofrecidoentrada)
+ alert ('Estos son los platos de entrada'  + menusofrecidoentrada )
+ 
+}
   
 

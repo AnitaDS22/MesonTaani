@@ -59,7 +59,7 @@ while (cantidadMesas < 16) {
       break;
     case '2':
     detallesmenu();
-     //menuelegido();
+  // menuelegido();
       break;
     case '3':
       cuentaTotal();
@@ -78,7 +78,8 @@ while (cantidadMesas < 16) {
 alert("Lamentablemente tenemos todo ocupado")
 
 // LISTA DE MENUS
-function detallesmenu() {
+
+function detallesmenu () {
 
 // clase Menus
 class Menus {
@@ -114,9 +115,21 @@ MenusdelaCasa.push(menu4)
 
 console.table (MenusdelaCasa)
 
-const menucarrito = []
 
-let menuOfrecidos = "Tenemos como Menus: "
+const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+
+const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
+
+
+}
+
+
+
+
+
+
+
+
 
 function menuelegido () {
 
@@ -129,47 +142,18 @@ menuOfrecidos += '\n Elija que menu desea: 1. 2. 3. 4'
 
 let respuesta = parseInt (prompt (menuOfrecidos))
 
-While (isNaN(respuesta)){
-  alert ('Por favor ingrese solo numeros')
-  respuesta = parseInt (prompt (menuOfrecidos))
-}
+//While (isNaN(respuesta))
+ // alert ('Por favor ingrese solo numeros')
+ // respuesta = parseInt (prompt (menuOfrecidos))
+//}
 
-}
-menuelegido ()
-
- 
- 
-const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
-
-const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
-
-console.log (Menucliente)
-alert ("El menu seleccionado es "  + menuseleccionado)
-alert (Menucliente)
 
 }
 
 
+// menuelegido ()
 
 
-
-for ( item of MenusdelaCasa) {
-
-  alert ('El precio del menu seleccionado es:')
-  alert (Menus.valor)
-  alert ('Este menu esta compuesto por:')
- alert (Menus.entrada)
- alert (Menus.segungoplato)
- alert (Menus.postre)
-
- 
- // let menusofrecido = "Estos son los Menus que tenemos: "
- 
-  const menusofrecidoentrada = MenusdelaCasa.find ((Menus) => Menus.entrada)
-  console.log (menusofrecidoentrada)
- alert ('Estos son los platos de entrada'  + menusofrecidoentrada )
- 
-}
 
 // Cuenta total
 
