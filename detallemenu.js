@@ -94,6 +94,39 @@ posicion = indice;
 
   }
   console.log(infomenuseleccionado);
+
+
 }
 
+
+
+if (menuseleccionado === 1) {
+
+  function listaMenu (MenusdelaCasa) {
+  let propiedades = objecto.keys(MenusdelaCasa);
+  
+  console.log (listaMenu)
+  
+  }
+  listaMenu ()
+  alert (listaMenu)
+  
+  }
+  
+    alert ('El precio del menu seleccionado es:')
+    alert (Menus.valor)
+    alert ('Este menu esta compuesto por:')
+   alert (Menus.entrada)
+   alert (Menus.segungoplato)
+   alert (Menus.postre)
+  
+   for ( item of MenusdelaCasa) {
+   // let menusofrecido = "Estos son los Menus que tenemos: "
+   
+    const menusofrecidoentrada = MenusdelaCasa.find ((Menus) => Menus.entrada)
+    console.log (menusofrecidoentrada)
+   alert ('Estos son los platos de entrada'  + menusofrecidoentrada )
+   
+  }
+  
 

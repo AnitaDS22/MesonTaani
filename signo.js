@@ -58,7 +58,8 @@ while (cantidadMesas < 16) {
       ReservaMesa();
       break;
     case '2':
-      detallesmenu();
+    detallesmenu();
+     //menuelegido();
       break;
     case '3':
       cuentaTotal();
@@ -93,7 +94,7 @@ class Menus {
 
   RestaStock (){
     this.stock = this.stock -1;
-    console.log ('El stock de ${this.opcion} ha sido actualizado')
+    console.log ("El stock de" + (this.opcion) + "ha sido actualizado")
   }
 
 
@@ -112,21 +113,31 @@ const menu4 = new Menus (4,'Mix picada', 'Hamburguesa', 'Panqueque', 1800, 20)
 MenusdelaCasa.push(menu4)
 
 console.table (MenusdelaCasa)
+
+const menucarrito = []
+
+let menuOfrecidos = "Tenemos como Menus: "
+
+function menuelegido () {
+
+for (item of MenusdelaCasa) {
+menuOfrecidos +=  (item.opcion) - (item.entrada) - (item.segungoplato) - (item.postre) + "por el valor de $ " + (item.valor)
+
+}
+
+menuOfrecidos += '\n Elija que menu desea: 1. 2. 3. 4'
+
+let respuesta = parseInt (prompt (menuOfrecidos))
+
+While (isNaN(respuesta)){
+  alert ('Por favor ingrese solo numeros')
+  respuesta = parseInt (prompt (menuOfrecidos))
+}
+
+}
+menuelegido ()
+
  
-
-
-
-
-
-const menuseleccionadocarrito = []
-
-//let menusofrecido = "Estos son los Menus que tenemos: "
-
-
-
-// funcion agregar menuseleccionado
-
-function agregarMenuElegido (){
  
 const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
@@ -136,19 +147,22 @@ console.log (Menucliente)
 alert ("El menu seleccionado es "  + menuseleccionado)
 alert (Menucliente)
 
-const MenuValor = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
-//console.log(MenuValor)
-  alert ('El precio del menu seleccionado es:')
-  alert (MenuValor)
-  const MenuEntrada = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
-  alert ('Este menu esta compuesto por:')
- alert (item.entrada)
- const Menusegundoplato = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
- alert (item.segungoplato)
- const MenuPostre = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
- alert (item.postre)
+}
 
- for ( item of MenusdelaCasa) {
+
+
+
+
+for ( item of MenusdelaCasa) {
+
+  alert ('El precio del menu seleccionado es:')
+  alert (Menus.valor)
+  alert ('Este menu esta compuesto por:')
+ alert (Menus.entrada)
+ alert (Menus.segungoplato)
+ alert (Menus.postre)
+
+ 
  // let menusofrecido = "Estos son los Menus que tenemos: "
  
   const menusofrecidoentrada = MenusdelaCasa.find ((Menus) => Menus.entrada)
@@ -157,37 +171,18 @@ const MenuValor = MenusdelaCasa.find (Menus => Menus.valor === menuseleccionado)
  
 }
 
-
-}
-
-agregarMenuElegido ()
-
-}
-
-alert (" valor de menu es " + MenuValor)
-
-
-//let cantidadMenu = parseInt (prompt('Cuantos menus desea del menu ' + menuseleccionado)
-
-
-
-
-
 // Cuenta total
 
+function cuentaTotal(cantidad, sumaTotal){
 
+  const descuento = 50
+  let totalFinal =  sumaTotal * 0.5
 
-function cuentaTotal(){
-
-alert ('El total de su cuenta es:')
-
-alert (Menucliente)
-
-const totalmenu = menuseleccionado (Menus.valor) * cantidadMenu
-
-alert (totalmenu)
+alert("El total de su cuenta por la " + cantidad + " personas es " + totalFinal + " con un descuento de " + descuento +  "%")
 
 }
+
+cuentaTotal (20,10000)
 
 
 
