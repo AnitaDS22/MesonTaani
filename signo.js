@@ -118,50 +118,50 @@ const Menucarrito = []
 
 let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
 
- alert ('Estos son los menus que tenemos')
+ alert ('Estos son los menus que tenemos \n')
  
  for (item of MenusdelaCasa) {
 
-  menusofrecido +=  ` \n Menu ${item.opcion} \n entrada: ${item.entrada} \n segundo plato ${item.segungoplato} \n postre ${item.postre}`;
+  menusofrecido +=  ` \n Menu ${item.opcion} \n entrada: ${item.entrada} \n segundo plato ${item.segungoplato} \n postre ${item.postre}
+  \n `;
 
 }
 
-let respuesta = alert (menusofrecido)
+alert (`Elija que menu desea: 1. 2. 3. 4`)
+let respuesta = parseInt (prompt (menusofrecido))
+
+alert (" El menu seleccionado es "  + respuesta)
 
 
-const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
-
-alert (" El menu seleccionado es "  + menuseleccionado)
-
-
-while (menuseleccionado > 4) {
-switch (menuseleccionado){
-  case '1':
+while (respuesta != 0) {
+switch (respuesta){
+  case 1:
+    Menucarrito.push (MenusdelaCasa[0])
+    alert (`Agregamos este menu a la cuenta ${MenusdelaCasa[0].id}`)
+    MenusdelaCasa[0].RestaStock()
+    break;
+    case 2:
     Menucarrito.push (MenusdelaCasa[1])
-    alert (`añadimos este menu a la cuenta ${MenusdelaCasa[1].id}`)
+    alert (`Agregamos este menu a la cuenta ${MenusdelaCasa[1].id}`)
     MenusdelaCasa[1].RestaStock()
     break;
-    case '2':
+    case 3:
     Menucarrito.push (MenusdelaCasa[2])
-    alert (`añadimos este menu a la cuenta ${MenusdelaCasa[2].id}`)
+    alert (`Agregamos este menu a la cuenta ${MenusdelaCasa[2].id}`)
     MenusdelaCasa[2].RestaStock()
     break;
-    case '3':
+    case 4:
     Menucarrito.push (MenusdelaCasa[3])
-    alert (`añadimos este menu a la cuenta ${MenusdelaCasa[3].id}`)
+    alert (`Agregamos este menu a la cuenta ${MenusdelaCasa[3].id}`)
     MenusdelaCasa[3].RestaStock()
     break;
-    case '4':
-    Menucarrito.push (MenusdelaCasa[4])
-    alert (`añadimos este menu a la cuenta ${MenusdelaCasa[4].id}`)
-    MenusdelaCasa[4].RestaStock()
-    break;
 default: 
-alert (`No tenemos ese menu`)
+alert (`Entendemos que no desea nada mas, le traeremos la cuenta`)
 break;
 
 }
-menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+
+respuesta = parseInt ( prompt (`Elija que menu desea: 1. 2. 3. 4 \n En caso de no querer ningùn nuevo menu elija opcion 5`)) 
 }
 
 
