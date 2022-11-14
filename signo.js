@@ -126,7 +126,8 @@ let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
 
 }
 
-let respuesta = prompt (menusofrecido)
+let respuesta = alert (menusofrecido)
+
 
 const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
 
@@ -171,13 +172,13 @@ function menuelegido () {
 //return  MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
 //return  `${item.opcion} ${item.entrada}`;
 
-}
-  console.log(menuelegido(menuseleccionado))
+console.log(menuelegido(menuseleccionado))
 
-  alert (menuelegido(menuseleccionado))
+alert (menuelegido(MenusdelaCasa))
+
+}
 
   menuelegido()
-
 }
 
 //const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
