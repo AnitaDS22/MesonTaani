@@ -59,7 +59,6 @@ while (cantidadMesas < 16) {
       break;
     case '2':
     detallesmenu();
-  // menuelegido();
       break;
     case '3':
       cuentaTotal();
@@ -115,43 +114,79 @@ MenusdelaCasa.push(menu4)
 
 console.table (MenusdelaCasa)
 
+const Menucarrito = []
 
-const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
 
-const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
+ alert ('Estos son los menus que tenemos')
+ 
+ for (item of MenusdelaCasa) {
 
+  menusofrecido +=  ` \n Menu ${item.opcion} \n entrada: ${item.entrada} \n segundo plato ${item.segungoplato} \n postre ${item.postre}`;
 
 }
 
+let respuesta = prompt (menusofrecido)
+
+const menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+
+alert (" El menu seleccionado es "  + menuseleccionado)
 
 
+while (menuseleccionado > 4) {
+switch (menuseleccionado){
+  case '1':
+    Menucarrito.push (MenusdelaCasa[1])
+    alert (`añadimos este menu a la cuenta ${MenusdelaCasa[1].id}`)
+    MenusdelaCasa[1].RestaStock()
+    break;
+    case '2':
+    Menucarrito.push (MenusdelaCasa[2])
+    alert (`añadimos este menu a la cuenta ${MenusdelaCasa[2].id}`)
+    MenusdelaCasa[2].RestaStock()
+    break;
+    case '3':
+    Menucarrito.push (MenusdelaCasa[3])
+    alert (`añadimos este menu a la cuenta ${MenusdelaCasa[3].id}`)
+    MenusdelaCasa[3].RestaStock()
+    break;
+    case '4':
+    Menucarrito.push (MenusdelaCasa[4])
+    alert (`añadimos este menu a la cuenta ${MenusdelaCasa[4].id}`)
+    MenusdelaCasa[4].RestaStock()
+    break;
+default: 
+alert (`No tenemos ese menu`)
+break;
 
-
-
-
+}
+menuseleccionado = parseInt ( prompt ('Elija que menu desea: 1. 2. 3. 4'))
+}
 
 
 function menuelegido () {
 
-for (item of MenusdelaCasa) {
-menuOfrecidos +=  (item.opcion) - (item.entrada) - (item.segungoplato) - (item.postre) + "por el valor de $ " + (item.valor)
+  alert (`Este menu ${item.opcion} tiene el valor de $ ${item.valor} `)
+
+//return  MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
+//return  `${item.opcion} ${item.entrada}`;
+
+}
+  console.log(menuelegido(menuseleccionado))
+
+  alert (menuelegido(menuseleccionado))
+
+  menuelegido()
 
 }
 
-menuOfrecidos += '\n Elija que menu desea: 1. 2. 3. 4'
-
-let respuesta = parseInt (prompt (menuOfrecidos))
-
-//While (isNaN(respuesta))
- // alert ('Por favor ingrese solo numeros')
- // respuesta = parseInt (prompt (menuOfrecidos))
-//}
+//const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
 
 
-}
 
 
-// menuelegido ()
+
+
 
 
 
