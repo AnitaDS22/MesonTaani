@@ -13,6 +13,7 @@ let mesa8 = 4;
 let mesa12 = 2;
 
 
+
 // Funcion reserva de mesa
 
 function ReservaMesa() {
@@ -115,6 +116,30 @@ MenusdelaCasa.push(menu4)
 console.table (MenusdelaCasa)
 
 const Menucarrito = []
+
+const divListaMenus = document.getElementById ("divListaMenus")
+
+MenusdelaCasa.forEach(menudearray => {
+  divListaMenus.innerHTML += 
+  `
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> ${menudearray.opcion}</h5>
+    <p class="card-text"> Entrada: ${menudearray.entrada}</p>
+    <p class="card-text"> Segundo plato: ${menudearray.segungoplato} </p>
+    <p class="card-text"> Postre:  ${menudearray.postre}</p>
+    <p class="card-text"> Precio: $ ${menudearray.valor} </p>
+   <button class="btn btn-dark"> Elegir </button>
+  </div>
+</div>
+`
+}
+  )
+
+
+
+
 
 let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
 
