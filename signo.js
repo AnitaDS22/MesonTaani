@@ -117,7 +117,7 @@ console.table (MenusdelaCasa)
 
 const Menucarrito = []
 
-const divListaMenus = document.getElementById ("divListaMenus")
+/*const divListaMenus = document.getElementById ("divListaMenus")
 
 MenusdelaCasa.forEach(menudearray => {
   divListaMenus.innerHTML += 
@@ -136,7 +136,7 @@ MenusdelaCasa.forEach(menudearray => {
 `
 }
   )
-
+*/
 
 
 
@@ -145,10 +145,32 @@ let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
 
  alert ('Estos son los menus que tenemos \n')
  
- for (item of MenusdelaCasa) {
+ const divListaMenus = document.getElementById("divListaMenus")
+ MenusdelaCasa.forEach(item => {
+divListaMenus.innerHTML +=
+`
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> ${item.opcion}</h5>
+    <p class="card-text"> Entrada: ${item.entrada}</p>
+    <p class="card-text"> Segundo plato: ${item.segungoplato} </p>
+    <p class="card-text"> Postre:  ${item.postre}</p>
+    <p class="card-text"> Precio: $ ${item.valor} </p>
+   <button class="btn btn-dark"> Elegir </button>
+  </div>
+</div>
+`
+ })
 
+
+  /*
+
+  for (item of MenusdelaCasa) {
   menusofrecido +=  ` \n Menu ${item.opcion} \n entrada: ${item.entrada} \n segundo plato ${item.segungoplato} \n postre ${item.postre}
   \n `;
+  */
+
 
 }
 
@@ -204,7 +226,7 @@ alert (menuelegido(MenusdelaCasa))
 }
 
   menuelegido()
-}
+
 
 //const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
 
