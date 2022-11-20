@@ -117,7 +117,7 @@ console.table (MenusdelaCasa)
 
 const Menucarrito = []
 
-/*const divListaMenus = document.getElementById ("divListaMenus")
+const divListaMenus = document.getElementById ("divListaMenus")
 
 MenusdelaCasa.forEach(menudearray => {
   divListaMenus.innerHTML += 
@@ -136,7 +136,7 @@ MenusdelaCasa.forEach(menudearray => {
 `
 }
   )
-*/
+
 
 
 
@@ -145,7 +145,7 @@ let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
 
  alert ('Estos son los menus que tenemos \n')
  
- const divListaMenus = document.getElementById("divListaMenus")
+/* const divListaMenus = document.getElementById("divListaMenus")
  MenusdelaCasa.forEach(item => {
 divListaMenus.innerHTML +=
 `
@@ -163,13 +163,13 @@ divListaMenus.innerHTML +=
 `
  })
 
-
-  /*
+*/
+  
 
   for (item of MenusdelaCasa) {
   menusofrecido +=  ` \n Menu ${item.opcion} \n entrada: ${item.entrada} \n segundo plato ${item.segungoplato} \n postre ${item.postre}
   \n `;
-  */
+  
 
 
 }
@@ -211,6 +211,7 @@ break;
 respuesta = parseInt ( prompt (`Elija que menu desea: 1. 2. 3. 4 \n En caso de no querer ningùn nuevo menu elija opcion 5`)) 
 }
 
+}
 
 function menuelegido () {
 
@@ -250,7 +251,4 @@ alert("El total de su cuenta por la " + cantidad + " personas es " + totalFinal 
 }
 
 cuentaTotal (20,10000)
-
-
-
 
