@@ -139,7 +139,7 @@ console.log (Menucliente)
 alert ("El menu seleccionado es "  + menuseleccionado)
 alert (Menucliente)
 
-}
+
 
 
 

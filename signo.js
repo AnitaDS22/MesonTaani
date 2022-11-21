@@ -15,10 +15,10 @@ let mesa12 = 2;
 let headerMeson = document.getElementById ("header")
 let headerbienvenidos = document.getElementById ("bienvenidos")
 
-headerbienvenidos.onmousemove = () => {
+headerbienvenidos.onmousemove = () =>   
 headerbienvenidos.innerText = " Ahora Elegimos tu menu"
 
-}
+
 
 
 // Funcion reserva de mesa
@@ -52,6 +52,7 @@ function ReservaMesa() {
   }
 }
 
+/*
 while (cantidadMesas < 16) {
   alert("Bienvenido a nuestro Meson")
 
@@ -83,6 +84,8 @@ while (cantidadMesas < 16) {
 }
 
 alert("Lamentablemente tenemos todo ocupado")
+
+*/
 
 // LISTA DE MENUS
 

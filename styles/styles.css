@@ -7,4 +7,8 @@
 
 body {
   background-color: var(--secondary-color);
+}
+
+.reservasMesas {
+  background-color: aquamarine;
 }/*# sourceMappingURL=styles.css.map */
