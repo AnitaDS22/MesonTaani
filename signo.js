@@ -12,6 +12,13 @@ let mesa4 = 6;
 let mesa8 = 4;
 let mesa12 = 2;
 
+let headerMeson = document.getElementById ("header")
+let headerbienvenidos = document.getElementById ("bienvenidos")
+
+headerbienvenidos.onmousemove = () => {
+headerbienvenidos.innerText = " Ahora Elegimos tu menu"
+
+}
 
 
 // Funcion reserva de mesa
