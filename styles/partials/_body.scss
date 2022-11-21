@@ -1,6 +1,43 @@
 
 .accion {
     background-color: rgb(120, 227, 192);
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-template-areas:
+   "accionseccion1 accionseccion2"
+   "accionseccion3 accionseccion4"
+   
+   ;
+   
+    align-content: space-between;
+    max-height: 40%;
+
+ .accionseccion1{  
+    grid-area: accionseccion1;
+    background-color: #D1DBBD;
+    max-width: 200px;
+    max-height: 200px;
+ }
+    
+ .accionseccion2{  
+    grid-area: accionseccion2;
+    background-color: #91AA9D;
+    max-width: 200px;
+    max-height: 200px;
+ }
+ .accionseccion3{  
+    grid-area: accionseccion3;
+    background-color: #3E606F;
+    max-width: 200px;
+    max-height: 200px;
+ }
+ .accionseccion4{  
+    grid-area: accionseccion4;
+    background-color: #193441;
+    max-width: 200px;
+    max-height: 200px;
+ }
 
  .buttonaccion{
     display: flex;
@@ -9,6 +46,5 @@ background-color: #f70845;
 border: none;
 border-radius: 10 px;
 
-
+ }
  }   
-}
