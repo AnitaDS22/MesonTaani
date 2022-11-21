@@ -50,7 +50,7 @@ posicion = indice;
 
   // variable elija menu correcto
 
-  let menuseleccionado = false
+ // let menuseleccionado = false
 
   // variable con datos del menu seleccionado
 

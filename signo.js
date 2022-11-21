@@ -16,10 +16,47 @@ let headerMeson = document.getElementById ("header")
 let headerbienvenidos = document.getElementById ("bienvenidos")
 
 headerbienvenidos.onmousemove = () =>   
-headerbienvenidos.innerText = " Ahora Elegimos tu menu"
+headerbienvenidos.innerText = "Ahora Elegimos tu menu"
 
 
+// div medio reserva mesas : acciones
+const eleccionAccion = document.getElementById ("accion")
+const botonaccion = document.getElementById ("buttonaccion")
 
+botonaccion.addEventListener ('click',() =>{
+
+  while (cantidadMesas < 16) {
+    alert("Bienvenido a nuestro Meson")
+  
+    // crear menu de acciones para mozo 
+  
+    let accionMesa = prompt("Seleccione accion realizar: \n 1. Reserva mesa \n 2. Eleccion de Menu \n 3. Cuenta total \n 4. Liberar mesa ");
+  
+    switch (accionMesa) {
+  
+      case '1':
+        // 1. Reserva mesa.
+        ReservaMesa();
+        break;
+      case '2':
+      detallesmenu();
+        break;
+      case '3':
+        cuentaTotal();
+        break;
+      case '4':
+        // 4. Liberar mesa
+        break;
+      default:
+        alert("Ingrese la accion correcta");
+        break;
+  
+  
+    }
+  }
+  
+  alert("Lamentablemente tenemos todo ocupado")
+  
 
 // Funcion reserva de mesa
 
@@ -51,41 +88,9 @@ function ReservaMesa() {
     alert(" No tenemos ninguna mesa disponible en este momento")
   }
 }
-
-/*
-while (cantidadMesas < 16) {
-  alert("Bienvenido a nuestro Meson")
-
-  // crear menu de acciones para mozo 
-
-  let accionMesa = prompt("Seleccione accion realizar: \n 1. Reserva mesa \n 2. Eleccion de Menu \n 3. Cuenta total \n 4. Liberar mesa ");
-
-  switch (accionMesa) {
-
-    case '1':
-      // 1. Reserva mesa.
-      ReservaMesa();
-      break;
-    case '2':
-    detallesmenu();
-      break;
-    case '3':
-      cuentaTotal();
-      break;
-    case '4':
-      // 4. Liberar mesa
-      break;
-    default:
-      alert("Ingrese la accion correcta");
-      break;
-
-
   }
-}
+)
 
-alert("Lamentablemente tenemos todo ocupado")
-
-*/
 
 // LISTA DE MENUS
 
