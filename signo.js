@@ -3,6 +3,7 @@
 // 1. Funcion reserva de mesa
 // 2. Eleccion de menu
 // 3. Funcion de proveer la cuenta final
+// 4. Opcion disponible para utilizar
 
 
 let cantidadMesas = 1;
@@ -21,7 +22,7 @@ headerbienvenidos.innerText = "Ahora Elegimos tu menu"
 
 // div medio reserva mesas : acciones
 const eleccionAccion = document.getElementById ("accion")
-const botonaccion = document.getElementById ("buttonaccion")
+const botonaccion = document.getElementById ("buttonaccionReserva")
 
 botonaccion.addEventListener ('click',() =>{
 
