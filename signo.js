@@ -22,9 +22,10 @@ headerbienvenidos.innerText = "Ahora Elegimos tu menu"
 
 // div medio reserva mesas : acciones
 const eleccionAccion = document.getElementById ("accion")
-const botonaccion = document.getElementById ("buttonaccionReserva")
+const botonaccionReserva = document.getElementById ("buttonaccionReserva")
 
-botonaccion.addEventListener ('click',() =>{
+
+botonaccionReserva.addEventListener ('click',() =>{
 
   while (cantidadMesas < 16) {
     alert("Bienvenido a nuestro Meson")
@@ -55,7 +56,6 @@ botonaccion.addEventListener ('click',() =>{
   
     }
   }
-  
   alert("Lamentablemente tenemos todo ocupado")
   
 
@@ -89,11 +89,7 @@ function ReservaMesa() {
     alert(" No tenemos ninguna mesa disponible en este momento")
   }
 }
-  }
-)
 
-
-// LISTA DE MENUS
 
 function detallesmenu () {
 
@@ -133,61 +129,17 @@ console.table (MenusdelaCasa)
 
 const Menucarrito = []
 
-const divListaMenus = document.getElementById ("divListaMenus")
-
-MenusdelaCasa.forEach(menudearray => {
-  divListaMenus.innerHTML += 
-  `
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"> ${menudearray.opcion}</h5>
-    <p class="card-text"> Entrada: ${menudearray.entrada}</p>
-    <p class="card-text"> Segundo plato: ${menudearray.segungoplato} </p>
-    <p class="card-text"> Postre:  ${menudearray.postre}</p>
-    <p class="card-text"> Precio: $ ${menudearray.valor} </p>
-   <button class="btn btn-dark"> Elegir </button>
-  </div>
-</div>
-`
-}
-  )
-
-
 
 
 
 let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
 
  alert ('Estos son los menus que tenemos \n')
- 
-/* const divListaMenus = document.getElementById("divListaMenus")
- MenusdelaCasa.forEach(item => {
-divListaMenus.innerHTML +=
-`
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"> ${item.opcion}</h5>
-    <p class="card-text"> Entrada: ${item.entrada}</p>
-    <p class="card-text"> Segundo plato: ${item.segungoplato} </p>
-    <p class="card-text"> Postre:  ${item.postre}</p>
-    <p class="card-text"> Precio: $ ${item.valor} </p>
-   <button class="btn btn-dark"> Elegir </button>
-  </div>
-</div>
-`
- })
-
-*/
   
-
   for (item of MenusdelaCasa) {
   menusofrecido +=  ` \n Menu ${item.opcion} \n entrada: ${item.entrada} \n segundo plato ${item.segungoplato} \n postre ${item.postre}
   \n `;
   
-
-
 }
 
 alert (`Elija que menu desea: 1. 2. 3. 4`)
@@ -227,32 +179,50 @@ break;
 respuesta = parseInt ( prompt (`Elija que menu desea: 1. 2. 3. 4 \n En caso de no querer ningùn nuevo menu elija opcion 5`)) 
 }
 
-}
+} // cierre funcion detalle menu
+} // cierre addlistener click opcion reserva
+) // click opcion reserva
+
+
+// Accion boton buttonaccionMenu
+
+const botonaccionMenu = document.getElementById ("buttonaccionMenu")
+
+botonaccionMenu.addEventListener ('click', () => {
+
+  console.log ('hiciste click en el boton')
+
+MenusdelaCasa.forEach(menudearray => {
+  divListaMenus.innerHTML += 
+  `
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> ${menudearray.opcion}</h5>
+    <p class="card-text"> Entrada: ${menudearray.entrada}</p>
+    <p class="card-text"> Segundo plato: ${menudearray.segungoplato} </p>
+    <p class="card-text"> Postre:  ${menudearray.postre}</p>
+    <p class="card-text"> Precio: $ ${menudearray.valor} </p>
+   <button class="btn btn-dark"> Elegir </button>
+  </div>
+</div>
+`
+})}
+  )
 
 function menuelegido () {
 
-  alert (`Este menu ${item.opcion} tiene el valor de $ ${item.valor} `)
-
-//return  MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado)
-//return  `${item.opcion} ${item.entrada}`;
+ // alert (`Este menu ${item.opcion} tiene el valor de $ ${item.valor} `)
 
 console.log(menuelegido(menuseleccionado))
 
-alert (menuelegido(MenusdelaCasa))
-
+alert (menuelegido(MenusdelaCasa.opcion))
 }
 
+
   menuelegido()
-
-
 //const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
-
-
-
-
-
-
-
+alert (Menucliente)
 
 
 // Cuenta total
