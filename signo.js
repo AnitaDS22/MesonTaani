@@ -214,15 +214,15 @@ function menuelegido () {
 
  // alert (`Este menu ${item.opcion} tiene el valor de $ ${item.valor} `)
 
-console.log(menuelegido(menuseleccionado))
+// console.log(menuelegido(menuseleccionado)) AQUIIII LO APAGUE
 
 alert (menuelegido(MenusdelaCasa.opcion))
 }
 
 
-  menuelegido()
+ // menuelegido() AQUIII LO APAGUE
 //const Menucliente = MenusdelaCasa.find (Menus => Menus.opcion === menuseleccionado) 
-alert (Menucliente)
+//alert (Menucliente) AQUIII LO APAGUE
 
 
 // Cuenta total
@@ -259,24 +259,20 @@ const inputdatosDia = document.getElementById ('inputDia').value;
 const inputdatosHora = parseInt (document.getElementById ('inputHora').value);
 
 botonEnviar.onclick = () => {
-  console.log (inputdatosNombre).value
 
-  const nombre = inputdatosNombre.value
-  alert (`Bienvenindo ${nombre}`)
+console.log(inputNombre.value)
+console.log(inputcantidad.value)
+console.log(inputDia.value)
+console.log(inputHora.value)
 
-  console.log (inputdatosCant)
-  console.log (inputdatosDia)
-  console.log (inputdatosHora)
-
-  const cant = inputdatosCant.value
-  const dia = inputdatosDia.value
-  const hora = inputdatosHora.value
-
-  inputdatosNombre.value = '';
-  inputdatosCant.value = '';
-  inputdatosDia.value = '';
-  inputdatosHora.value = '';
+  const nombre = inputNombre.value
+  alert (`Bienvenido/a ${nombre}`)
   
+  inputNombre.value = '';
+  inputcantidad.value = '';
+  inputDia.value = '';
+  inputHora.value = '';
+
 
  // const cliente1 = new cliente ()
 
