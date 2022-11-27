@@ -238,3 +238,49 @@ alert("El total de su cuenta por la " + cantidad + " personas es " + totalFinal 
 
 cuentaTotal (20,10000)
 
+// Accion toma datos de reserva
+
+class Clientes {
+constructor (numero, nombre, cantidad, dia, hora) {
+ this.numero = numero
+ this.nombre = nombre
+ this.cantidad = cantidad
+ this.dia = dia
+ this.hora = hora
+
+}
+}
+
+constResevadelaCasa = []
+
+const inputdatosNombre = document.getElementById ('inputNombre')
+const inputdatosCant = document.getElementById ('inputcantidad') 
+const inputdatosDia = document.getElementById ('inputDia')
+const inputdatosHora = document.getElementById ('inputHora')
+
+botonEnviar.onclick = () => {
+  console.log (inputdatosNombre)
+
+  const nombre = inputdatosNombre.valor
+  alert (`Bienvenindo ${nombre}`)
+
+  console.log (inputdatosCant)
+  console.log (inputdatosDia)
+  console.log (inputdatosHora)
+
+  inputdatosNombre.valor = ''
+  inputdatosCant.valor = ''
+  inputdatosDia.valor = ''
+  inputdatosHora.valor = ''
+
+  const cliente1 = new cliente ()
+
+  // falta hacer el push de los datos del cliente y grabarlos 
+
+
+
+
+
+} // fin onclick
+
+
