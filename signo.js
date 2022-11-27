@@ -188,7 +188,7 @@ respuesta = parseInt ( prompt (`Elija que menu desea: 1. 2. 3. 4 \n En caso de n
 
 const botonaccionMenu = document.getElementById ("buttonaccionMenu")
 
-botonaccionMenu.addEventListener ('click', () => {
+botonaccionMenu.addEventListener('click', () =>{
 
   console.log ('hiciste click en el boton')
 
