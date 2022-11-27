@@ -147,7 +147,7 @@ let respuesta = parseInt (prompt (menusofrecido))
 
 alert (" El menu seleccionado es "  + respuesta)
 
-localStorage.setItem('menuhoy', respuesta)
+localStorage.setItem('menuahora', respuesta)
 
 while (respuesta != 0) {
 switch (respuesta){
