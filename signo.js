@@ -253,27 +253,32 @@ constructor (numero, nombre, cantidad, dia, hora) {
 
 constResevadelaCasa = []
 
-const inputdatosNombre = document.getElementById ('inputNombre')
-const inputdatosCant = document.getElementById ('inputcantidad') 
-const inputdatosDia = document.getElementById ('inputDia')
-const inputdatosHora = document.getElementById ('inputHora')
+const inputdatosNombre = document.getElementById ('inputNombre').value;
+const inputdatosCant = parseInt (document.getElementById ('inputcantidad').value);
+const inputdatosDia = document.getElementById ('inputDia').value;
+const inputdatosHora = parseInt (document.getElementById ('inputHora').value);
 
 botonEnviar.onclick = () => {
-  console.log (inputdatosNombre)
+  console.log (inputdatosNombre).value
 
-  const nombre = inputdatosNombre.valor
+  const nombre = inputdatosNombre.value
   alert (`Bienvenindo ${nombre}`)
 
   console.log (inputdatosCant)
   console.log (inputdatosDia)
   console.log (inputdatosHora)
 
-  inputdatosNombre.valor = ''
-  inputdatosCant.valor = ''
-  inputdatosDia.valor = ''
-  inputdatosHora.valor = ''
+  const cant = inputdatosCant.value
+  const dia = inputdatosDia.value
+  const hora = inputdatosHora.value
 
-  const cliente1 = new cliente ()
+  inputdatosNombre.value = '';
+  inputdatosCant.value = '';
+  inputdatosDia.value = '';
+  inputdatosHora.value = '';
+  
+
+ // const cliente1 = new cliente ()
 
   // falta hacer el push de los datos del cliente y grabarlos 
 
