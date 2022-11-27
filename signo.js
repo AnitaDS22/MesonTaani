@@ -147,6 +147,7 @@ let respuesta = parseInt (prompt (menusofrecido))
 
 alert (" El menu seleccionado es "  + respuesta)
 
+localStorage.setItem('menuhoy', respuesta)
 
 while (respuesta != 0) {
 switch (respuesta){
@@ -242,12 +243,13 @@ cuentaTotal (20,10000)
 // Se llena formulario con datos que luego se guardaran en un array
 
 class Clientes {
-constructor (numero, nombre, cantidad, dia, hora) {
- this.numero = numero
+constructor (cliente, nombre, cantidad, dia, hora, mail) {
+ this.cliente = cliente
  this.nombre = nombre
  this.cantidad = cantidad
  this.dia = dia
  this.hora = hora
+ this.mail = mail
 
 }
 }
@@ -258,6 +260,8 @@ const inputdatosNombre = document.getElementById ('inputNombre').value;
 const inputdatosCant = parseInt (document.getElementById ('inputcantidad').value);
 const inputdatosDia = document.getElementById ('inputDia').value;
 const inputdatosHora = parseInt (document.getElementById ('inputHora').value);
+const inputdatosmail = document.getElementById ('inputMail').value;
+
 
 botonEnviar.onclick = () => {
 
@@ -265,6 +269,7 @@ console.log(inputNombre.value)
 console.log(inputcantidad.value)
 console.log(inputDia.value)
 console.log(inputHora.value)
+console.log(inputMail.value)
 
  // const nombre = inputNombre.value
  // alert (`Bienvenido/a ${nombre}`)
@@ -273,12 +278,20 @@ reservadelaCasa.nombre = inputNombre.value
 reservadelaCasa.cantidad = inputcantidad.value
 reservadelaCasa.dia = inputDia.value
 reservadelaCasa.hora = inputHora.value
+reservadelaCasa.mail = inputMail.value
 
+console.log (reservadelaCasa)
+
+reservadelaCasa.forEach((Clientes) => {   
+const nuevareserva = document.createElement ('cliente')
+nuevareserva.innerText = `${cliente}`
+}
+)
 alert (`bienvenido/a ${reservadelaCasa.nombre}, el dia ${reservadelaCasa.dia} tienen una reserva a las ${reservadelaCasa.hora} para  ${reservadelaCasa.cantidad}`)
 
-//const reservadelaCasa = [numero, nombre, cantidad, dia, hora]
-//console.log (reservadelaCasa)
+// reservadelaCasa.push(cliente)
 
+//console.log(reservadelaCasa)
 
 // solo cambie nombre de la variable nombre por eso solo llame a la variable nombre asi
 
@@ -286,6 +299,7 @@ alert (`bienvenido/a ${reservadelaCasa.nombre}, el dia ${reservadelaCasa.dia} ti
   inputcantidad.value = '';
   inputDia.value = '';
   inputHora.value = '';
+
 
  // const cliente1 = new cliente ()
 
