@@ -238,7 +238,8 @@ alert("El total de su cuenta por la " + cantidad + " personas es " + totalFinal 
 
 cuentaTotal (20,10000)
 
-// Accion toma datos de reserva
+// Accion toma datos de reserva. 
+// Se llena formulario con datos que luego se guardaran en un array
 
 class Clientes {
 constructor (numero, nombre, cantidad, dia, hora) {
@@ -251,7 +252,7 @@ constructor (numero, nombre, cantidad, dia, hora) {
 }
 }
 
-constResevadelaCasa = []
+const reservadelaCasa = []
 
 const inputdatosNombre = document.getElementById ('inputNombre').value;
 const inputdatosCant = parseInt (document.getElementById ('inputcantidad').value);
@@ -267,19 +268,22 @@ console.log(inputHora.value)
 
   const nombre = inputNombre.value
   alert (`Bienvenido/a ${nombre}`)
-  
+
+reservadelaCasa.nombre = inputdatosNombre.value
+reservadelaCasa.cantidad = inputcantidad.value
+reservadelaCasa.dia = inputdatosDia.value
+reservadelaCasa.hora = inputHora.value
+
+alert (`bienvenido/a ${nombre} son ${reservadelaCasa.cantidad}`)
+
   inputNombre.value = '';
   inputcantidad.value = '';
   inputDia.value = '';
   inputHora.value = '';
 
-
  // const cliente1 = new cliente ()
 
   // falta hacer el push de los datos del cliente y grabarlos 
-
-
-
 
 
 } // fin onclick
