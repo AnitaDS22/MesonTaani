@@ -252,7 +252,7 @@ constructor (numero, nombre, cantidad, dia, hora) {
 }
 }
 
-
+reservadelaCasa = []
 
 const inputdatosNombre = document.getElementById ('inputNombre').value;
 const inputdatosCant = parseInt (document.getElementById ('inputcantidad').value);
@@ -266,17 +266,19 @@ console.log(inputcantidad.value)
 console.log(inputDia.value)
 console.log(inputHora.value)
 
-const reservadelaCasa = {}
+ // const nombre = inputNombre.value
+ // alert (`Bienvenido/a ${nombre}`)
 
-  const nombre = inputNombre.value
-  alert (`Bienvenido/a ${nombre}`)
-
-reservadelaCasa.nombre = inputdatosNombre.value
+reservadelaCasa.nombre = inputNombre.value
 reservadelaCasa.cantidad = inputcantidad.value
-reservadelaCasa.dia = inputdatosDia.value
+reservadelaCasa.dia = inputDia.value
 reservadelaCasa.hora = inputHora.value
 
-alert (`bienvenido/a ${nombre}, el dia ${reservadelaCasa.dia} tienen una reserva a las ${reservadelaCasa.hora} para  ${reservadelaCasa.cantidad}`)
+alert (`bienvenido/a ${reservadelaCasa.nombre}, el dia ${reservadelaCasa.dia} tienen una reserva a las ${reservadelaCasa.hora} para  ${reservadelaCasa.cantidad}`)
+
+//const reservadelaCasa = [numero, nombre, cantidad, dia, hora]
+//console.log (reservadelaCasa)
+
 
 // solo cambie nombre de la variable nombre por eso solo llame a la variable nombre asi
 
