@@ -57,6 +57,8 @@ botonaccionReserva.addEventListener('click', () => {
   }
   alert("Lamentablemente tenemos todo ocupado")
 
+} // cierre addlistener click opcion reserva
+) // fin click opcion boton accion Reserva
 
   // Funcion reserva de mesa
 
@@ -126,28 +128,6 @@ botonaccionReserva.addEventListener('click', () => {
 
     console.table(MenusdelaCasa)
 
-    const botonaccionMenu = document.getElementById("buttonaccionMenu")
-const divListaMenus = document.getElementById ("divListaMenus")
-
-
-  MenusdelaCasa.forEach(menuArray=>{
-    divListaMenus.innerHTML += `
-    <div id= "${menuArray.opcion}" class="card">
-
-      <div class="card-body">
-      <h2 class="card-title">${menuArray.entrada}</h2>
-      <h2 class="card-title">${menuArray.segungoplato}</h2>
-      <h2 class="card-title">${menuArray.postre}</h2>
-      <h1 class="card-title">${menuArray.valor}</h1>
-
-      <button id=${menuArray.opcion} class="btn btn-primary"> QUIERO </button>
-
-</div>
-</div>
-`
-  })
-
-
     const Menucarrito = []
 
     let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
@@ -165,11 +145,6 @@ const divListaMenus = document.getElementById ("divListaMenus")
 
     alert(" El menu seleccionado es " + respuesta)
 
-    respuesta.forEach((respuesta) => {
-      console.log(respuesta)
-      localStorage.setItem('menuahora', respuesta)
-
-    })
     console.log(localStorage.getItem('menuahora'))
 
 
@@ -204,13 +179,32 @@ const divListaMenus = document.getElementById ("divListaMenus")
     }
 
   } // cierre funcion detalle menu
-} // cierre addlistener click opcion reserva
-) // fin click opcion reserva
 
-// ---------------
 
-// Accion boton buttonaccionMenu
+const botonaccionMenu = document.getElementById("buttonaccionMenu")
+const divListaMenus = document.getElementById ("divListaMenus")
+const menuCards = document.getElementById ("menucards")
 
+menuCards.addEventListener ('click', ()=>{
+
+  MenusdelaCasa.forEach(menuArray=>{
+    divListaMenus.innerHTML += `
+    <div id= "${menuArray.opcion}" class="card">
+
+      <div class="card-body">
+      <h2 class="card-title">${menuArray.entrada}</h2>
+      <h2 class="card-title">${menuArray.segungoplato}</h2>
+      <h2 class="card-title">${menuArray.postre}</h2>
+      <h1 class="card-title">${menuArray.valor}</h1>
+
+      <button id=${menuArray.opcion} class="btn btn-primary"> QUIERO </button>
+
+</div>
+</div>
+`
+  })
+
+})
 
 
 function menuelegido() {
@@ -307,21 +301,10 @@ botonEnviar.onclick = () => {
   }) 
   alert(`bienvenido/a ${reservadelaCasa.nombre}, el dia ${reservadelaCasa.dia} tienen una reserva a las ${reservadelaCasa.hora} para  ${reservadelaCasa.cantidad}`)
 
-  // reservadelaCasa.push(cliente)
-
-  //console.log(reservadelaCasa)
-
-  // solo cambie nombre de la variable nombre por eso solo llame a la variable nombre asi
-
   inputNombre.value = '';
   inputcantidad.value = '';
   inputDia.value = '';
   inputHora.value = '';
-
-
-  // const cliente1 = new cliente ()
-
-  // falta hacer el push de los datos del cliente y grabarlos 
 
 
 } // fin onclick
