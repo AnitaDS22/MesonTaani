@@ -126,6 +126,28 @@ botonaccionReserva.addEventListener('click', () => {
 
     console.table(MenusdelaCasa)
 
+    const botonaccionMenu = document.getElementById("buttonaccionMenu")
+const divListaMenus = document.getElementById ("divListaMenus")
+
+
+  MenusdelaCasa.forEach(menuArray=>{
+    divListaMenus.innerHTML += `
+    <div id= "${menuArray.opcion}" class="card">
+
+      <div class="card-body">
+      <h2 class="card-title">${menuArray.entrada}</h2>
+      <h2 class="card-title">${menuArray.segungoplato}</h2>
+      <h2 class="card-title">${menuArray.postre}</h2>
+      <h1 class="card-title">${menuArray.valor}</h1>
+
+      <button id=${menuArray.opcion} class="btn btn-primary"> QUIERO </button>
+
+</div>
+</div>
+`
+  })
+
+
     const Menucarrito = []
 
     let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
@@ -188,28 +210,6 @@ botonaccionReserva.addEventListener('click', () => {
 // ---------------
 
 // Accion boton buttonaccionMenu
-
-const botonaccionMenu = document.getElementById("buttonaccionMenu")
-const divListaMenus = document.getElementById ("divListaMenus")
-
-
-  MenusdelaCasa.forEach(menuArray=> {
-    divListaMenus.innerHTML += `
-    <div id= "${menuArray.opcion}" class="card">
-
-      <div class="card-body">
-      <h2 class="card-title">${menuArray.entrada}</h2>
-      <h2 class="card-title">${menuArray.segungoplato}</h2>
-      <h2 class="card-title">${menuArray.postre}</h2>
-      <h1 class="card-title">${menuArray.valor}</h1>
-
-      <button id=${menuArray.opcion} class="btn btn-primary"> QUIERO </button>
-
-</div>
-</div>
-`
-  })
-
 
 
 
