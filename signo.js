@@ -178,7 +178,7 @@ botonaccionReserva.addEventListener('click', () => {
       respuesta = parseInt(prompt(`Elija que menu desea: 1. 2. 3. 4 \n En caso de no querer ningùn nuevo menu elija opcion 0`))
     }
 
-  } // cierre funcion detalle menu
+ 
 
 
 const botonaccionMenu = document.getElementById("buttonaccionMenu")
@@ -188,9 +188,8 @@ const menuCards = document.getElementById ("menucards")
 menuCards.addEventListener ('click', ()=>{
 
   MenusdelaCasa.forEach(menuArray=>{
-    divListaMenus.innerHTML += `
+    menuCards.innerHTML +=`
     <div id= "${menuArray.opcion}" class="card">
-
       <div class="card-body">
       <h2 class="card-title">${menuArray.entrada}</h2>
       <h2 class="card-title">${menuArray.segungoplato}</h2>
@@ -205,7 +204,7 @@ menuCards.addEventListener ('click', ()=>{
   })
 
 })
-
+} // cierre funcion detalle menu
 
 function menuelegido() {
 
