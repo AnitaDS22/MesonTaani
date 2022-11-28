@@ -8,6 +8,7 @@
    grid-template-areas:
    "accionseccion1 accionseccion2"
    "accionseccion3 accionseccion4"
+   "accionseccion5 accionseccion5"
    
    ;
    
@@ -43,7 +44,7 @@
  .accionseccion5{  
    grid-area: accionseccion5;
    background-color: #59a4ca;
-   max-width: 200px;
+   max-width: 400px;
    max-height: 200px;
 }
 

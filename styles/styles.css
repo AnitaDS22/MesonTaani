@@ -15,7 +15,7 @@ body {
   gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "accionseccion1 accionseccion2" "accionseccion3 accionseccion4";
+  grid-template-areas: "accionseccion1 accionseccion2" "accionseccion3 accionseccion4" "accionseccion5 accionseccion5";
   align-content: space-between;
   max-height: 40%;
 }
@@ -46,7 +46,7 @@ body {
 .accion .accionseccion5 {
   grid-area: accionseccion5;
   background-color: #59a4ca;
-  max-width: 200px;
+  max-width: 400px;
   max-height: 200px;
 }
 .accion .buttonaccion {

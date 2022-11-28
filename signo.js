@@ -185,10 +185,10 @@ const botonaccionMenu = document.getElementById("buttonaccionMenu")
 const divListaMenus = document.getElementById ("divListaMenus")
 const menuCards = document.getElementById ("menucards")
 
-menuCards.addEventListener ('click', ()=>{
+divListaMenus.addEventListener ('click', ()=>{
 
   MenusdelaCasa.forEach(menuArray=>{
-    menuCards.innerHTML +=`
+    divListaMenus.innerHTML +=`
     <div id= "${menuArray.opcion}" class="card">
       <div class="card-body">
       <h2 class="card-title">${menuArray.entrada}</h2>
@@ -223,6 +223,10 @@ function menuelegido() {
 
 // Cuenta total
 
+const opcionCuentatotal = document.getElementById("opcionCuentatotal")
+
+opcionCuentatotal.addEventListener ('click', () =>{
+
 function cuentaTotal(cantidad, sumaTotal) {
 
   const descuento = 50
@@ -233,6 +237,8 @@ function cuentaTotal(cantidad, sumaTotal) {
 }
 
 cuentaTotal(20, 10000)
+
+})
 
 // Accion toma datos de reserva. 
 // Se llena formulario con datos que luego se guardaran en un array
