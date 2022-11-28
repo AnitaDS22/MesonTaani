@@ -328,4 +328,10 @@ alert (`bienvenido/a ${reservadelaCasa.nombre}, el dia ${reservadelaCasa.dia} ti
 
 } // fin onclick
 
+const botonAgenda = document.getElementById ("buttonaccionAgenda")
 
+botonAgenda.onclick = () => {
+const infoclienteResJSON = JSON.parse (localStorage.getItem('infoclienteResJSON'))
+console.log (infoclienteResJSON)
+}
+ 
