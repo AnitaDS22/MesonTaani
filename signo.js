@@ -285,6 +285,23 @@ reservadelaCasa.mail = inputMail.value
 
 console.log (reservadelaCasa)
 
+localStorage.setItem ('cliente', inputNombre.value)
+localStorage.setItem ('dia', inputDia.value)
+
+const infoClienteReserva = {
+  usuario: inputNombre.value,
+  dia : inputDia.value,
+  cantidad : inputcantidad.value,
+  hora : inputHora.value,
+}
+
+const infoclienteResJSON = JSON.stringify(infoClienteReserva)
+
+console.log(infoclienteResJSON)
+
+localStorage.setItem ('infoclienteJson', infoclienteResJSON)
+
+
 reservadelaCasa.forEach((Clientes) => {   
 const nuevareserva = document.createElement ('cliente')
 nuevareserva.innerText = `${cliente}`
