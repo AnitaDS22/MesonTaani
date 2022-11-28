@@ -26,8 +26,7 @@ const botonaccionReserva = document.getElementById ("buttonaccionReserva")
 
 
 botonaccionReserva.addEventListener ('click',() =>{
-
-  while (cantidadMesas < 16) {
+ while (cantidadMesas < 16) {
     alert("Bienvenido a nuestro Meson")
   
     // crear menu de acciones para mozo 
@@ -131,7 +130,6 @@ const Menucarrito = []
 
 
 
-
 let menusofrecido = "Estos son los menus que tenemos para ofrecerle : "
 
  alert ('Estos son los menus que tenemos \n')
@@ -147,15 +145,15 @@ let respuesta = parseInt (prompt (menusofrecido))
 
 alert (" El menu seleccionado es "  + respuesta)
 
+respuesta.forEach ((respuesta) => {
+  console.log (respuesta)
 localStorage.setItem('menuahora', respuesta)
 
-MenusdelaCasa.forEach ((respuesta, indice)=> { 
-  console.log(respuesta)
-
 })
+console.log(localStorage.getItem ('menuahora'))
 
 
-while ((respuesta != 0) || (respuesta > 5)) {
+while ((respuesta != 0) || (respuesta < 5)) {
 switch (respuesta){
   case 1:
     Menucarrito.push (MenusdelaCasa[0])
@@ -180,10 +178,9 @@ switch (respuesta){
 default: 
 alert (`Entendemos que no desea nada mas, le traeremos la cuenta`)
 break;
-
 }
 
-respuesta = parseInt ( prompt (`Elija que menu desea: 1. 2. 3. 4 \n En caso de no querer ningùn nuevo menu elija opcion 5`)) 
+respuesta = parseInt ( prompt (`Elija que menu desea: 1. 2. 3. 4 \n En caso de no querer ningùn nuevo menu elija opcion 0`)) 
 }
 
 } // cierre funcion detalle menu
