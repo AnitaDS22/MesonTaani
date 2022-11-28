@@ -149,7 +149,13 @@ alert (" El menu seleccionado es "  + respuesta)
 
 localStorage.setItem('menuahora', respuesta)
 
-while (respuesta != 0) {
+MenusdelaCasa.forEach ((respuesta, indice)=> { 
+  console.log(respuesta)
+
+})
+
+
+while ((respuesta != 0) || (respuesta > 5)) {
 switch (respuesta){
   case 1:
     Menucarrito.push (MenusdelaCasa[0])
