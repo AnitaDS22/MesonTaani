@@ -332,6 +332,6 @@ const botonAgenda = document.getElementById ("buttonaccionAgenda")
 
 botonAgenda.onclick = () => {
 const infoclienteResJSON = JSON.parse (localStorage.getItem('infoclienteResJSON'))
-console.log (infoclienteResJSON)
+console.log(infoclienteResJSON)
 }
  
